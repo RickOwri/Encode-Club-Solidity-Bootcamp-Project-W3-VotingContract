@@ -1,12 +1,12 @@
 import { ethers } from "hardhat";
-import { MyERC20Votes__factory, TokenizedBallot__factory } from "../typechain-types";
+import { MyToken__factory, TokenizedBallot__factory } from "../typechain-types";
 import * as dotenv from "dotenv";
 
 dotenv.config();
 
 // const MINT_VALUE = ethers.utils.parseUnits("100");
-const TOKEN_CONTRACT_ADDRESS = "0xddeaA47c577cfdFd6F6e5FC7661102B63dDf1502";
-const TOKENIZEDBALLOT_CONTRACT_ADDRESS = "0x3BACe8A59F0F92dB5bb770Bc01B16748539d5e0c";
+const TOKEN_CONTRACT_ADDRESS = "0x35a24F28f846DB57F13B534799659824A81f31FF";
+const TOKENIZEDBALLOT_CONTRACT_ADDRESS = "0x9267611856783B54c2d296F3594519bb37BFc63c";
 // const TRANSFERED_UNIT = "0.01"
 // const TRANSFERED_UNIT_2 = "0.02"
 const PROPOSAL_1 = 1
@@ -66,7 +66,7 @@ async function deployContract() {
 
   printHeader("CONTRACT - ATTACHMENT");
 
-  const tokenContractFactory = new MyERC20Votes__factory(signer);
+  const tokenContractFactory = new MyToken__factory(signer);
   const tokenContract = await tokenContractFactory.attach(TOKEN_CONTRACT_ADDRESS);
 
   const TokenizedBallotContractfactory = new TokenizedBallot__factory(signer);

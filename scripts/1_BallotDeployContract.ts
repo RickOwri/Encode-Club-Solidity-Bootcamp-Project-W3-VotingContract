@@ -1,5 +1,5 @@
 import { ethers } from "hardhat";
-import { MyERC20Votes__factory, TokenizedBallot__factory} from "../typechain-types";
+import { MyToken__factory, TokenizedBallot__factory} from "../typechain-types";
 import * as dotenv from "dotenv";
 
 dotenv.config();
@@ -59,7 +59,6 @@ async function deployContract() {
 
     console.log(`Balance is ${balance} WEI`);
 
-
     divideOutput("CONTRACT TOKEN - DEPLOYMENT");
 
     const proposals = process.argv.slice(2);
@@ -72,7 +71,7 @@ async function deployContract() {
 
     const PROPOSALS = proposals.map(ethers.utils.formatBytes32String)
     
-    const tokenContractFactory = new MyERC20Votes__factory(signer);
+    const tokenContractFactory = new MyToken__factory(signer);
 
     const tokenContract = await tokenContractFactory.deploy();
 
@@ -107,7 +106,6 @@ async function deployContract() {
         tokenContract.address,
         lastBlock.number+TARGET_BLOCK,
     );
-
     
     await tokenizedBallot.deployed();
     

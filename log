@@ -1,24 +1,4 @@
-# Week03 - Project
-Form groups of 3 to 5 students
-Develop and run scripts for “Ballot.sol” within your group to give voting rights casting votes, delegating votes and querying results
-Write a report with each function execution and the transaction hash, if successful, or the revert reason, if failed
-Submit your code in a github repository in the form
-
-# scripts
-- deploying
-- givevoting rights
-- casting votes
-- delegating votes
-- querying results
-
 # DeployToken and BallotContract
-
-input
-```
-clear; yarn run ts-node --files scripts/1_BallotDeployContract.ts Ghost in the shell
-```
-
-
 ```
 
 ------------------------------ACCOUNT - CONNECTION------------------------------
@@ -50,10 +30,6 @@ at the block 3524779
 The targeted block is 3524806
 ```
 # DelegateToken + Give Vote Token 
-input
-```
-clear; yarn run ts-node --files scripts/2_DelegateBallot.ts Ghost in the shell
-```
 ```
 
 ------------------------------ACCOUNT - CONNECTION------------------------------
@@ -97,11 +73,6 @@ Account 0x3F5b2e7c258C7b29A03731c49217D3fA6d47beBd has 5.0 units of voting power
 Account 0x2471B1373F20f52e5ce6Cd0D08b4cE56a75acc44 has 8.0 units of voting power getVotes from transaction 0x09ca04d3bd1776d31cad0814f8f50f28bb490f23e06db2f91aa80b1b94f0d254 at block 3524788
 ```
 # casting votes first try
-
-input
-```
-clear; yarn run ts-node --files scripts/3_BallotGiveVote.ts Ghost in the shell
-```
 ```
 
 ------------------------------ACCOUNT - CONNECTION------------------------------
@@ -150,5 +121,3 @@ Connection to Tokenized Ballot Contract with Account 0x2471B1373F20f52e5ce6Cd0D0
 └───────────────────────┴──────────────────────────────────────────────┘
 The winning proposition is in
 ```
-
-
